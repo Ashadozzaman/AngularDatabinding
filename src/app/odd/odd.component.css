@@ -1,0 +1,13 @@
+p{
+    color: #b33;
+    background: #bfaa91;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: sans-serif;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin-left: -12px;
+    margin-top: 15px;
+    width: 50%;
+    padding: 5px 5px;
+}

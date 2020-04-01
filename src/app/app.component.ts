@@ -6,25 +6,61 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [{type:'server',name:'Test Server',content:'Just a test'}];
+  oddNumbers : number [] = [];
+  enenNumbers : number [] = [];
 
-  onServerAdded(serverData:{serverName:string,serverContent:string}){
-    this.serverElements.push({
-      type:'server',
-      name: serverData.serverName,
-      content: serverData.serverContent
-    })
-
+  
+  onIntervalFired(firednumber: number){
+    if(firednumber % 2 === 0){
+      this.enenNumbers.push(firednumber);
+    }else{
+      this.oddNumbers.push(firednumber);
+    }
   }
-  onBluePrintAdded(bluePrintData:{serverName:string,serverContent:string}){
-    this.serverElements.push({
-      type:'bluePrint',
-      name: bluePrintData.serverName,
-      content: bluePrintData.serverContent
-    })
-  }
-  onDestroyFirst(){
-    this.serverElements.splice(0,1);
-  }
-   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// serverElements = [{type:'server',name:'Test Server',content:'Just a test'}];
+
+// onServerAdded(serverData:{serverName:string,serverContent:string}){
+//   this.serverElements.push({
+//     type:'server',
+//     name: serverData.serverName,
+//     content: serverData.serverContent
+//   })
+
+// }
+// onBluePrintAdded(bluePrintData:{serverName:string,serverContent:string}){
+//   this.serverElements.push({
+//     type:'bluePrint',
+//     name: bluePrintData.serverName,
+//     content: bluePrintData.serverContent
+//   })
+// }
+// onDestroyFirst(){
+//   this.serverElements.splice(0,1);
+// }

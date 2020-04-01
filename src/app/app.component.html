@@ -1,22 +1,13 @@
 <div class="container">
-  <app-cockfit 
-  (serverCreated)="onServerAdded($event)"
-  (blueprientCreated) = "onBluePrintAdded($event)">
-  <!-- (bpcreated) = "onBluePrintAdded($event)"> -->
-
-</app-cockfit>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <button class="btn btn-info" (click)="onDestroyFirst()">Destroy First</button>
-      <app-server-element *ngFor="let serverElement of serverElements " 
-      [srv_element]="serverElement"
-      [name] = "serverElement">
-        <p #contentParagraph>
-          <strong *ngIf="serverElement.type === 'server'" style="color: red;">{{serverElement.content}}</strong>
-          <em *ngIf="serverElement.type === 'bluePrint'">{{serverElement.content}}</em>
-      </p>
-      </app-server-element>
+    <div class="row">
+        <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-sm-6">   
+            <app-odd *ngFor="let oddNumber of oddNumbers" [number]= "oddNumber"></app-odd>
+        </div>
+        <div class="col-sm-6">   
+            <app-even *ngFor="let evenNumber of enenNumbers" [number]= "evenNumber"></app-even>
+        </div>
+    </div>
 </div>
