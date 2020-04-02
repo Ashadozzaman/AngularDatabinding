@@ -17,6 +17,8 @@ export class AppComponent {
       this.oddNumbers.push(firednumber);
     }
   }
+
+  
 }
 
 

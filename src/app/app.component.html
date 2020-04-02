@@ -1,4 +1,8 @@
 <div class="container">
+    <h3 appBasicHighlight >Numbering Game</h3>
+    <h3 [appBetterHighlight]="'red'" [defaultColor]="'yellow'"  >Numbering Game</h3>
+
+    
     <div class="row">
         <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
     </div>

@@ -1,11 +1,11 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
   templateUrl: './game-control.component.html',
   styleUrls: ['./game-control.component.css']
 })
-export class GameControlComponent implements OnInit {
+export class GameControlComponent implements OnInit{
   interval;
   @Output() intervalFired = new EventEmitter<number>();
   lastNumber = 0;
@@ -23,5 +23,11 @@ export class GameControlComponent implements OnInit {
   onPauseGame(){
     clearInterval(this.interval);
   }
+  // onDestroyFirst(){
+  //   this.interval.splice(0,1);
+  // }
+  // ngOnDestroy(){
+  //   this.interval.splice(0,1);
+  // }
 
 }
