@@ -17,7 +17,45 @@ export class AppComponent {
       this.oddNumbers.push(firednumber);
     }
   }
+oddnumbers = [1,3,5];
+evennumbers = [2,4,6]
+onlyOdd = false;
+value = '';
 
+
+servers = [
+  {
+    instanceType: 'medium',
+    name: 'Production Server',
+    status: 'stable',
+    started: new Date(15, 1, 2017)
+  },
+  {
+    instanceType: 'large',
+    name: 'User Database',
+    status: 'stable',
+    started: new Date(15, 1, 2017)
+  },
+  {
+    instanceType: 'small',
+    name: 'Development Server',
+    status: 'offline',
+    started: new Date(15, 1, 2017)
+  },
+  {
+    instanceType: 'small',
+    name: 'Testing Environment Server',
+    status: 'stable',
+    started: new Date(15, 1, 2017)
+  }
+];
+getStatusClasses(server: {instanceType: string, name: string, status: string, started: Date}) {
+  return {
+    'list-group-item-success': server.status === 'stable',
+    'list-group-item-warning': server.status === 'offline',
+    'list-group-item-danger': server.status === 'critical'
+  };
+}
   
 }
 
