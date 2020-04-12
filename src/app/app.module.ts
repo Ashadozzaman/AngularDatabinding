@@ -11,6 +11,7 @@ import { BasicHighlightDirectice } from './basic-highlight/basic-highlight.direc
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { UnlessDirective } from './unless.directive';
 import { ShortenPipe } from './shorten.pipe';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ShortenPipe } from './shorten.pipe';
     BasicHighlightDirectice,
     BetterHighlightDirective,
     UnlessDirective,
-    ShortenPipe
+    ShortenPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
