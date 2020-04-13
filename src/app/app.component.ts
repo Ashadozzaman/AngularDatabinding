@@ -22,7 +22,14 @@ evennumbers = [2,4,6]
 onlyOdd = false;
 value = '';
 
+//start pipe section
+appStatus = new Promise( (resolve, reject) => {
+  setTimeout( () => {
+    resolve('stable');
+  },2000);
+}
 
+);
 servers = [
   {
     instanceType: 'medium',
@@ -56,6 +63,14 @@ getStatusClasses(server: {instanceType: string, name: string, status: string, st
     'list-group-item-warning': server.status === 'offline',
     'list-group-item-danger': server.status === 'critical'
   };
+}
+onAddServer(){
+  this.servers.push({
+    instanceType: 'small',
+    name: 'Testing 2 Environment Server',
+    status: 'stable',
+    started: new Date(13, 4, 2020)
+  });
 } 
   
 }
